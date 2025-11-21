@@ -149,6 +149,17 @@ app.put("/modosit", (req, res) => {
         return res.json(result)
     })
 })  
+
+// Egyszerű API végpont
+app.get("/api/uzenet", (req, res) => {
+    const adat = {
+        status: "ok",
+        message: "Ez egy egyszerű JSON válasz a backendből",
+        time: new Date().toLocaleString()
+    };
+    res.json(adat);
+});
+
 app.listen(3001, () => {
     console.log("Server is running on port 3001");
 }); 
